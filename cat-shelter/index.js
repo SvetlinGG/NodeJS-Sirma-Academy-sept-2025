@@ -1,5 +1,8 @@
 const http = require('http');
-const indexHtml = require('./views/home/index.html')
+const indexHtml = require('./views/home/index.html');
+const siteCss = require('./content/styles/site.css')
+
+
 const port = 4000;
 
 const server = http.createServer((req, res)=> {
@@ -11,7 +14,10 @@ const server = http.createServer((req, res)=> {
         });
         res.write(indexHtml);
     }else if ( req.url === '/styles/site.css'){
-
+        res.writeHead(200, {
+            'content-type': 'text/css',
+        });
+        res.write(siteCss);
     }
     
 
