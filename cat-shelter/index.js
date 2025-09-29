@@ -1,6 +1,7 @@
 const http = require('http');
 const indexHtml = require('./views/home/index.html');
-const siteCss = require('./content/styles/site.css')
+const siteCss = require('./content/styles/site.css');
+const addBreed = require('./views/addBreed.html')
 
 
 const port = 4000;
