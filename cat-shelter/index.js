@@ -19,6 +19,8 @@ const server = http.createServer((req, res)=> {
             'content-type': 'text/css',
         });
         res.write(siteCss);
+    }else if(req.url === '/cats/add-breed'){
+        res.write(addBreed);
     }
     
 
