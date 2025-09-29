@@ -1,7 +1,8 @@
 const http = require('http');
 const indexHtml = require('./views/home/index.html');
 const siteCss = require('./content/styles/site.css');
-const addBreed = require('./views/addBreed.html')
+const addBreed = require('./views/addBreed.html');
+const addCat = require('./views/addCat.html');
 
 
 const port = 4000;
@@ -21,6 +22,9 @@ const server = http.createServer((req, res)=> {
         res.write(siteCss);
     }else if(req.url === '/cats/add-breed'){
         res.write(addBreed);
+
+    }else if ( req.url === '/cats/add-cat'){
+        res.write(addCat);
     }
     
 
