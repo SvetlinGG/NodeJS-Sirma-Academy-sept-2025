@@ -7,6 +7,33 @@ const addCat = require('./views/addCat.html');
 
 const port = 4000;
 
+const cats = [
+    {
+        id: 1,
+        name: "Pretty Citty",
+        breed: "Bombay Cat",
+        description: "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho",
+    },
+    {
+        id: 2,
+        name: "Boston",
+        breed: "Sphinks",
+        description: "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho",
+    },
+    {
+        id: 3,
+        name: "Arizona",
+        breed: "Tiger Cat",
+        description: "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho",
+    },
+    {
+        id: 4,
+        name: "Bulgarian",
+        breed: "Beauty Street",
+        description: "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho",
+    }
+]
+
 const server = http.createServer((req, res)=> {
 
     if ( req.url === '/styles/site.css'){
