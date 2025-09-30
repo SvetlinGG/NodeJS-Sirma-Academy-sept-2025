@@ -29,6 +29,10 @@ const server = http.createServer((req, res)=> {
         case '/cats/add-cat':
         res.write(addCat);
         break;
+
+        default:
+            res.write(`<h1>Page Not Found</h1>`);
+            break;
     }
     
 
