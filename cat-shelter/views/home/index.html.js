@@ -32,7 +32,7 @@ module.exports = (cats) => `<!DOCTYPE html>
     <main>
         <section class="cats">
             <ul>
-                ${cats.map(cat => catTemplate(cat))}
+                ${cats.map(catTemplate).join('\n')}
             </ul>
         </section>
     </main>
