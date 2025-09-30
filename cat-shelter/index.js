@@ -17,16 +17,18 @@ const server = http.createServer((req, res)=> {
         return res.end();
     }   
 
-    if ( req.url === '/'){
-        res.writeHead(200, {
-            'content-type': 'text/html',
-        });
+    switch (req.url){
+        case '/':
         res.write(indexHtml);
-    }else if(req.url === '/cats/add-breed'){
-        res.write(addBreed);
+        break;
 
-    }else if ( req.url === '/cats/add-cat'){
+        case'/cats/add-breed':
+        res.write(addBreed);
+        break;
+
+        case '/cats/add-cat':
         res.write(addCat);
+        break;
     }
     
 
