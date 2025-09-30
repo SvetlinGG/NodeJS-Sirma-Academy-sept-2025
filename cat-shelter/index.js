@@ -11,26 +11,30 @@ const cats = [
     {
         id: 1,
         name: "Pretty Citty",
-        breed: "Bombay Cat",
+        breed: "Angora",
         description: "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho",
+        imageUrl: "https://www.thesprucepets.com/thmb/-64ZsblV3KSKAdIXzv96bo9DKvw=/2121x1414/filters:fill(auto,1)/GettyImages-1140917170-727bc42801da47c4ace4eb34940d2120.jpg"
     },
     {
         id: 2,
         name: "Boston",
         breed: "Sphinks",
         description: "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho",
+        imageUrl: "http://1.bp.blogspot.com/_jZHHRfnq9F8/TUbjlfODhAI/AAAAAAAAMJQ/RiwsPfEpw0E/s1600/Sphynx-cat.gif"
     },
     {
         id: 3,
         name: "Arizona",
-        breed: "Tiger Cat",
+        breed: "Siam",
         description: "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho",
+        imageUrl: "https://purebredkitties.com/cdn/shop/files/Siamese__Cat_Breed__1.png?v=1711334446",
     },
     {
         id: 4,
         name: "Bulgarian",
-        breed: "Beauty Street",
+        breed: "Pets Cat",
         description: "Dominant and aggressive to other cats. Will probably eat you in your sleep. Very cute tho",
+        imageUrl: "https://tse1.mm.bing.net/th/id/OIP.oFzvx1O42uyS9Zl3TBtBTwHaE7?pid=Api&P=0&h=220"
     }
 ]
 
