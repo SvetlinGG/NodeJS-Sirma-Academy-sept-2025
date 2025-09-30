@@ -1,4 +1,6 @@
-module.exports = `<!DOCTYPE html>
+const catTemplate = require('../cat.html')
+
+module.exports = (cats) => `<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -30,7 +32,7 @@ module.exports = `<!DOCTYPE html>
     <main>
         <section class="cats">
             <ul>
-                // dmnbdjbd!!!
+                ${cats.map(cat => catTemplate(cat))}
             </ul>
         </section>
     </main>

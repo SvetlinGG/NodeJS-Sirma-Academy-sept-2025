@@ -1,5 +1,5 @@
 const http = require('http');
-const indexHtml = require('./views/home/index.html');
+const indexTemplate = require('./views/home/index.html');
 const siteCss = require('./content/styles/site.css');
 const addBreed = require('./views/addBreed.html');
 const addCat = require('./views/addCat.html');
@@ -46,7 +46,7 @@ const server = http.createServer((req, res)=> {
 
     switch (req.url){
         case '/':
-        res.write(indexHtml);
+        res.write(indexTemplate(cats));
         break;
 
         case'/cats/add-breed':
