@@ -13,4 +13,15 @@ app.get('/about', (req, res, next) => {  // here is Middleware
     res.send('This is about page')
 });
 
+app.use('/user/:userId', (req, res) => {
+    const userId = req.params.userId;
+    // Check if user exists in db/session
+
+    let userExist = false;
+    if ( !userExist) { res.redirect('/login')}
+    else {next()}
+});
+app.get('/user/:userId', (req, res) => {
+    res.send('User home page');
+});
 app.listen(port, () => { console.log(`Server is listen on ${port}`)})
