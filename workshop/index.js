@@ -1,10 +1,16 @@
 const express = require('express');
+
 const app = express();
 const port = 4000;
+const HBS = '.hbs'
 
 //app.use(express.static('public'));
 //app.use('/static', express.static('/public'));
 app.use('/static', express.static(__dirname + '/public'));
+const expressHbs = require('express-handlebars');
+
+const handlebars = expressHbs.create(extname: '.hbs');
+app.engine(HBS);
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello my first web server</h1>');
