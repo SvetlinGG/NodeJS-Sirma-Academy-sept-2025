@@ -7,6 +7,15 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
     res.send('<h1>Hello my first web server</h1>');
 });
+
+app.post('/', (req, res) => {
+    // req body something with if and send back response
+
+    app.delete('/')
+    app.patch
+    app.put
+})
+
 app.get('/about', (req, res, next) => {  // here is Middleware
 
     console.log('Middleware');
