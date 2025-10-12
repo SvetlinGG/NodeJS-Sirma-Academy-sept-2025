@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-app.use(express.static('public'));
+//app.use(express.static('public'));
+//app.use('/static', express.static('/public'));
+app.use('/static', express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello my first web server</h1>');
@@ -11,10 +13,12 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     // req body something with if and send back response
 
-    app.delete('/')
-    app.patch
-    app.put
-})
+    // app.delete('/')
+    // app.patch
+    // app.put
+});
+
+
 
 app.get('/about', (req, res, next) => {  // here is Middleware
 
