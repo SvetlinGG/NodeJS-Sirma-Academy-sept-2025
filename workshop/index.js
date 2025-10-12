@@ -27,4 +27,7 @@ app.use('/user/:userId', (req, res, next) => {
 app.get('/user/:userId', (req, res) => {
     res.send('User home page');
 });
+app.get('/login', (req, res) => {
+    res.send('Login Page')
+})
 app.listen(port, () => { console.log(`Server is listen on ${port}`)})
