@@ -9,12 +9,17 @@ const HBS = '.hbs'
 app.use('/static', express.static(__dirname + '/public'));
 const expressHbs = require('express-handlebars');
 
-const handlebars = expressHbs.create(extname: '.hbs');
-app.engine(HBS);
+const handlebars = expressHbs.create({extname: HBS});
+app.engine(HBS, handlebars.engine);
+app.set('view engine', HBS);
 
 app.get('/', (req, res) => {
-    res.send('<h1>Hello my first web server</h1>');
-});
+    res.render('home');
+})
+
+// app.get('/', (req, res) => {
+//     res.send('<h1>Hello my first web server</h1>');
+// });
 
 app.post('/', (req, res) => {
     // req body something with if and send back response
