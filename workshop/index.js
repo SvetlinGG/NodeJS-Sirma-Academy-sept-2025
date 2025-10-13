@@ -14,8 +14,8 @@ app.engine(HBS, handlebars.engine);
 app.set('view engine', HBS);
 
 app.get('/', (req, res) => {
-    res.render('home');
-})
+    res.render('main');
+});
 
 // app.get('/', (req, res) => {
 //     res.send('<h1>Hello my first web server</h1>');
