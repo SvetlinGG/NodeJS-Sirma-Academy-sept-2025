@@ -13,6 +13,12 @@ const handlebars = expressHbs.create({extname: HBS});
 app.engine(HBS, handlebars.engine);
 app.set('view engine', HBS);
 
+const context = {
+    dogs: [
+        { name: 'Sharo', breed: 'Superdog'},
+        { name: 'K9', breed: 'German Shepherd'}]};
+        
+
 app.get('/', (req, res) => {
     res.render('home');
 });
