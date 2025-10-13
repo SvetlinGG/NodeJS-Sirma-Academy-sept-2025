@@ -70,6 +70,11 @@ app.get('/user/:userId', (req, res) => {
 app.get('/login', (req, res) => {
     res.send('Login Page')
 });
+app.get('/courses', handleGetCourses);
+function handleGetCourses(req, res){
+    res.render('courses')
+}
+
 
 
 app.listen(port, () => { console.log(`Server is listen on ${port}`)})
