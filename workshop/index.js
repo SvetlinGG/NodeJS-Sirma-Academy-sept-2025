@@ -71,8 +71,15 @@ app.get('/login', (req, res) => {
     res.send('Login Page')
 });
 app.get('/courses', handleGetCourses);
+app.post('/courses', handlePostCourses)
+
 function handleGetCourses(req, res){
     res.render('courses')
+};
+function handlePostCourses(req, res){
+    console.log('This is post request');
+    
+    
 }
 
 
