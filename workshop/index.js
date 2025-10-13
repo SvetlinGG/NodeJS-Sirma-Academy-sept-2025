@@ -16,9 +16,11 @@ app.set('view engine', HBS);
 
 
 app.get('/dogs', (req, res) => {
-    dogs: [
+    const dogs = [
         { name: 'Sharo', breed: 'Superdog'},
         { name: 'K9', breed: 'German Shepherd'}];
+
+    res.render('dogs', {dogs});
 
 })
 
