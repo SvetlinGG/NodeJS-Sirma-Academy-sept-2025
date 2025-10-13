@@ -21,7 +21,10 @@ app.get('/dogs', (req, res) => {
         { name: 'K9', breed: 'German Shepherd'}];
 
     res.render('dogs', {dogs});
+});
 
+app.get('/condition', (req, res) => {
+    res.render('condition', {summer: false});
 })
 
 app.get('/', (req, res) => {
