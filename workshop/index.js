@@ -14,7 +14,7 @@ app.engine(HBS, handlebars.engine);
 app.set('view engine', HBS);
 
 app.get('/', (req, res) => {
-    res.render('main');
+    res.render('home');
 });
 
 // app.get('/', (req, res) => {
