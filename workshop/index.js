@@ -83,7 +83,7 @@ function handlePostCourses(req, res){
 }
 
 app.get('/users/:userId', (req, res) => {
-    const userId = req.params.userId;
+    const userId = Number(req.params.userId);
 
     if ( userId === 4){
         res.send('This is Ivan');
@@ -91,7 +91,7 @@ app.get('/users/:userId', (req, res) => {
     }else if ( userId === 5){
         res.send('This is Dani')
     }else{
-        res,send('Not Found')
+        res.send('Not Found')
     }
 });
 
