@@ -96,7 +96,11 @@ app.get('/users/:userId', (req, res) => {
 });
 
 app.route('/books').get((req, res) => {
-    res.send('This is books')
-})
+    res.render('books');
+}).post((req, res) => {
+    console.log(req.body);
+    res.send('This is the books page')
+});
+
 
 app.listen(port, () => { console.log(`Server is listen on ${port}`)})
