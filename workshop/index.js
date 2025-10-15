@@ -89,11 +89,14 @@ app.get('/users/:userId', (req, res) => {
         res.send('This is Ivan');
 
     }else if ( userId === 5){
-        res.send('This is Dani')
+        res.send('This is Dani');
     }else{
-        res.send('Not Found')
+        res.send('Not Found');
     }
 });
 
+app.route('/books').get((req, res) => {
+    res.send('This is books')
+})
 
 app.listen(port, () => { console.log(`Server is listen on ${port}`)})
