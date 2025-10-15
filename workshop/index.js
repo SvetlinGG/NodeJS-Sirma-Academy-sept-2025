@@ -63,6 +63,7 @@ app.use('/user/:userId', (req, res, next) => {
     }else {
         next()
     }
+
 });
 app.get('/user/:userId', (req, res) => {
     res.send('User home page');
@@ -79,9 +80,20 @@ function handleGetCourses(req, res){
 function handlePostCourses(req, res){
     console.log('This is post request');
     
-    
 }
 
+app.get('/users/:userId', (req, res) => {
+    const userId = req.params.userId;
+
+    if ( userId === 4){
+        res.send('This is Ivan');
+
+    }else if ( userId === 5){
+        res.send('This is Dani')
+    }else{
+        res,send('Not Found')
+    }
+});
 
 
 app.listen(port, () => { console.log(`Server is listen on ${port}`)})
